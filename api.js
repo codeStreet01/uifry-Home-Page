@@ -1,55 +1,93 @@
-async function getUserData(username) {
-    var spinner = document.getElementById('spinner');
-    spinner.classList.add('spinner');
-    try {
-      const response = await fetch(`https://api.github.com/users/${username}/repos`);
-      const userData = await response.json();
+function getSelectedExamList1() {
 
-      // Handle the data as needed
-      console.log(userData);
-      var userRepo = document.getElementById('userRepo');
+  const dropdown = document.getElementById("exams1");
+  const dropdownSecond = document.getElementById("exams2");
 
-      userData.forEach(function(item) {
-        var newDiv = document.createElement('div');
-        newDiv.id = 'myDynamicDiv';
-        //newDiv.textContent = item.name;
-        //newDiv.textContent = item.description;
-        //newDiv.innerHTML = `<p>${item.name}</p>`
-        newDiv.innerHTML = '<p>' + item.name + '</p>' +
-         '<p>' +item.description + '</p>'+
-         '<p>' + item.language + '</p>'+ 
-         '<p>' + item.created_at + '</p>';
-
-
-        userRepo.appendChild(newDiv);
-      });
-
-
-    } catch (error) {
-      console.error('Error fetching data:', error);
+  const selectedExam = dropdown.value;
+  var options = dropdownSecond.getElementsByTagName('option');
+  for (var i = 0; i < options.length; i++) {
+    options[i].disabled = false;
+  }
+  if (selectedExam) {
+    var optionToDisable = dropdownSecond.querySelector('option[value="' + selectedExam + '"]');
+    if (optionToDisable) {
+      optionToDisable.disabled = true;
     }
-
-    try {
-        const response = await fetch(`https://api.github.com/users/${username}`);
-        const userData = await response.json();
-  
-        var infopart = document.getElementById('infoPart');
-        infopart.innerHTML = '<p>' + userData.name + '</p>' +
-        '<p>' +'@'+userData.login + '</p>'+   
-        '<p>' +userData.bio + '</p>'+
-        '<p>' +'Followers -  '+ userData.followers + '</p>'+ 
-        '<p>' + userData.created_at + '</p>'+ 
-        '<p>' + "Follow" + '</p>';
-  
-        var imageElement = document.getElementById('photocircle');
-        imageElement.src = userData.avatar_url;
-  
-
-       
-
-
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
   }
 
+
+
+  fetch('data.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data.examsdata)
+      console.log(data.examsdata[selectedExam]);
+      if (Array.isArray(data.examsdata[selectedExam])) {
+        data.examsdata[selectedExam] = data.examsdata[selectedExam][0]
+      }
+      let newAges = Object.values(data.examsdata[selectedExam]);
+      const ageCells = document.querySelectorAll('#tableBody .first');
+      ageCells.forEach((ageCell, index) => {
+        ageCell.textContent = newAges[index];
+      });
+    })
+    .catch(error => {
+      console.error('There was a problem fetching the JSON file:', error);
+    });
+
+
+}
+
+
+
+
+
+
+
+function getSelectedExamList2() {
+
+  const dropdown = document.getElementById("exams2");
+  const dropdownFirst = document.getElementById("exams1");
+
+  const selectedExam = dropdown.value;
+
+  var options = dropdownFirst.getElementsByTagName('option');
+  for (var i = 0; i < options.length; i++) {
+    options[i].disabled = false;
+  }
+  if (selectedExam) {
+    var optionToDisable = dropdownFirst.querySelector('option[value="' + selectedExam + '"]');
+    if (optionToDisable) {
+      optionToDisable.disabled = true;
+    }
+  }
+
+
+  fetch('data.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data.examsdata)
+      console.log(data.examsdata[selectedExam]);
+      if (Array.isArray(data.examsdata[selectedExam])) {
+        data.examsdata[selectedExam] = data.examsdata[selectedExam][0]
+      }
+      let newAges = Object.values(data.examsdata[selectedExam]);
+      const ageCells = document.querySelectorAll('#tableBody .second');
+      ageCells.forEach((ageCell, index) => {
+        ageCell.textContent = newAges[index];
+      });
+    })
+    .catch(error => {
+      console.error('There was a problem fetching the JSON file:', error);
+    });
+}

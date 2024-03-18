@@ -1,0 +1,96 @@
+{
+  "pagetitle": "Compare Exams",
+  "pagesubtitle": "Please use the drop down from the buttons, to select the exams you want to compare.",
+  "menuitems": [
+    "SBI PO",
+    "IBPS PO",
+    "IDBI Bank PO",
+    "Syndicate Bank PO",
+    "RBI Assistant"
+  ],
+  "titledisp": {
+      "salary": "Salary*",
+      "jobprofile": "Job Profile",
+      "age": "Eligibility: Age",
+      "education": "Eligibility: Education",
+      "promotions":"Promotions",
+      "selectionprocess": "Selection Process",
+      "vacancies": "Vacancies",
+      "registrationdeadline": "Registration Deadline",
+      "examdate": "Exam Date"
+   },
+  "disporder": [
+      "salary",
+      "jobprofile", 
+      "age",
+      "education", 
+      "promotions", 
+      "selectionprocess", 
+      "vacancies", 
+      "registrationdeadline", 
+      "examdate"
+  ],
+
+  "examsdata": {
+      "SBI PO": [
+      {
+        "salary": "Rs 30,000 to Rs 40,000",
+        "jobprofile": "Customer services, Bringing new business, Cash handling Payment clearance and Maintaining reports",
+        "age": "21 - 30 years",
+        "education": "Graduation ",
+        "promotions": "3 years",
+        "selectionprocess": "Prelims, Mains & Interview",
+        "vacancies": "403",
+        "registrationdeadline": "6th March",
+        "examdate": "Prelims: 21 - 24 April"
+      }
+    ],
+    "IBPS PO": [
+      {
+        "salary": "Rs 40,000 to Rs 70,000",
+        "jobprofile": "Customer services, Bringing new business, Cash handling Payment clearance and Maintaining reports",
+        "age": "21 - 30 years",
+        "education": "Graduation (Any discipline)Graduation (Any discipline)",
+        "promotions": "2 - 3 years",
+        "selectionprocess": "Prelims, Mains & Interview",
+        "vacancies": "123",
+        "registrationdeadline": "6th March",
+        "examdate": "Prelims: 19 - 25 April"
+      }
+    ],
+    "IDBI Bank PO":
+      {
+        "salary": "Rs 50,000 to Rs 70,000",
+        "jobprofile": "Customer services, Bringing new business, Cash handling Payment clearance and Maintaining reports",
+        "age": "21 - 30 years",
+        "education": "Graduation",
+        "promotions": "4 - 5 years",
+        "selectionprocess": "Prelims, Mains & Interview",
+        "vacancies": "4232",
+        "registrationdeadline": "6th March",
+        "examdate": "Prelims: 22 - 26 April"
+     },
+    "Syndicate Bank PO": {
+        "salary": "Rs 20,000 to Rs 80,000",
+        "jobprofile": "Customer services, Bringing new business, Cash handling Payment clearance and Maintaining reports",
+        "age": "21 - 30 years",
+        "education": "Graduation (Any discipline)Graduation (Any discipline)",
+        "promotions": "2 - 3 years",
+        "selectionprocess": "Prelims, Mains & Interview",
+        "vacancies": "567",
+        "registrationdeadline": "6th March",
+        "examdate": "Prelims: 29 - 30 April"
+    },
+    "RBI Assistant": {
+      "salary": "Rs 35,000 to Rs 60,000",
+      "jobprofile": "Customer services, Bringing new business, Cash handling Payment clearance and Maintaining reports",
+      "age": "21 - 30 years",
+      "education": "Graduation (Any discipline)Graduation (Any discipline)",
+      "promotions": "4 years",
+      "selectionprocess": "Prelims, Mains & Interview",
+      "vacancies": "3000",
+      "registrationdeadline": "6th March",
+      "examdate": "Prelims: 29 - 30 April & 6 - 7 May"
+    }
+  }
+}
