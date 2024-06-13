@@ -1,8 +1,13 @@
+@font-face {
+  font-family: Clash Display;
+  src: url('./assets/ClashDisplay-Variable.ttf') format('truetype'); 
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "open sans";
+  font-family: 'Clash Display';
 }
 
 html,
@@ -11,81 +16,332 @@ body {
   height: 100%;
 }
 
-#title {
+#nav{
   width: 100%;
-  height: 20%;
-  background-color: white;
-}
-
-#compareData{
-  width: 100%;
+  height: 15%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+#leftNav{
+  margin-left: 10%;
+  height: 100%;
+  width: 40%;
+  display: flex;
   align-items: center;
+  justify-content: space-around;
+  font-size: 19px;
+  font-weight: 400;
 }
 
-#compareTable {
-  width: 100%;
-  height: 70%;
-  background-color: rgb(255, 255, 255);
-  padding: 2%;
+#leftNav p span{ 
+  color: #FF5555;
+  font-weight: 700;
 }
+
+#rightNav{
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#rightNav button{
+  width: 49%;
+  background-color: black;
+  height: 52%;
+  color: white;
+  border: none;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+#home{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+}
+
+#leftHome{
+  width: 44%;
+  margin-left: 11.5%;
+  height: 100%;
+  position: relative;
+}
+
+#leftHome h1{
+  font-size: 64px;
+  position: absolute;
+  top: 18%;
+}
+
+#leftHome p{
+  font-size: 19px;
+  position: absolute;
+  top: 39%;
+  color: rgb(135, 135, 135);
+  text-shadow: 1px 1px rgb(214, 214, 214);
+  letter-spacing: 1px;
+}
+
+#GetStartedButton{
+  width: 29%;
+  background-color: black;
+  height: 8%;
+  color: white;
+  border: none;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+#WatchVideoButton{
+  width: 29%;
+  background-color: white;
+  height: 8%;
+  color: black;
+  border: 1px solid rgb(176, 176, 176);
+  font-size: 17px;
+  border-radius: 4px;
+  margin-left: 3%;
+}
+
+#rightHome{
+  width: 44.5%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#overlay{
+  left: -2%;
+  position: absolute;
+}
+#overlay1{
+  top: 12%;
+  left: 26%;
+  position: absolute;
+}
+
+#overlay2{
+  position: absolute;
+  top: 6%;
+  left: 10%;
+}
+
+#overlay3{
+  position: absolute;
+  top: -3%;
+  right: 17%;
+}
+
+#star1{
+  position: absolute;
+  left:-15%;
+  width: 7%;
+  top: 5%;
+}
+#A{
+  position: absolute;
+  left: 10%;
+  width: 70%;
+  bottom: -10%;
+}
+
+#features{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+#leftFeatures{
+  width: 44%;
+  height: 100%;
+  margin-left: 11.5%;
+  position: relative;
+}
+
+#rightFeatures{
+  width: 44.5%;
+  height: 100%;
+  position: relative;
+  padding-top: 8%;
+}
+
+#FeatureOverlay1{
+  position: absolute;
+  left: -15%;
+  top: -5%;
+}
+
+#FeatureOverlay2{
+  position: absolute;
+  left: 8%;
+  top: 5%;
+  transform: rotate(15deg);
+}
+
+#title{
+  font-size: 18px;
+  color: #FF5555;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+#mainHeading{
+  font-size: 48px;
+}
+
+.subHeading{
+  font-size: 18px;
+  margin-top: 6%;
+  margin-bottom: 2%;
+  font-weight: 600;
+}
+.content{
+  font-size: 18px;
+  opacity: .5;
+  width: 80%;
+}
+#FeatureOverlay3{
+  position: absolute;
+  right: 0%;
+  top: -5%;
+}
+
+#advantagesNotification{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+#leftAdvantagesNotification{
+  width: 44%;
+  height: 100%;
+  margin-left: 11.5%;
+  padding-top: 18%;
+}
+
+
+#rightAdvantagesNotification{
+  width: 44.5%;
+  height: 100%;
+  position: relative;
+}
+#rightAdvantagesNotificationOverlay{
+  position: absolute;
+  left: -5%;
+}
+
+#advantagesCustomizable{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+#leftAdvantagesCustomizable{
+  width: 44%;
+  height: 100%;
+  margin-left: 11.5%;
+}
+
+#rightAdvantagesCustomizable{
+  padding-top: 18%;
+  width: 44.5%;
+  height: 100%;
+}
+
+#testimonial{
+  width: 100%;
+  height: 100%;
+}
+.testimonialHeading{
+  text-align: center;
+  color: black;
+}
+#testimonialContent{
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+
+#leftTestimonial{
+  width: 44%;
+  height: 100%;
+  margin-left: 11.5%;
+  position: relative;
+}
+
+#rightTestimonial{
+  padding-top: 10%;
+  width: 44.5%;
+  height: 100%;
+}
+#leftTestimonialOverlay{
+  position: absolute;
+  top: 0%;
+  left: -20%;
+}
+#rightTestimonial h6{
+  font-size: 28px;
+  margin-bottom: 5%;
+  font-weight: 600;
+}
+
+#rightTestimonial p{
+  font-size: 18px;
+  width: 75%;
+  opacity: .5;
+  line-height: 32px;
+  margin-bottom: 4%;
+}
+
 #footer{
   width: 100%;
-  height: 10%;
-  background-color: #ffffff;
+  height: 62%;
+  padding-left: 11.5%;
+  padding-right: 11.5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-
-#userRepo1 select{
-  border: none;
+#footerData{
   width: 100%;
-  background-color: transparent;
-  outline: none;
-  font-weight: 700;
-  color: white;
-  font-size: 24px;
+  height: 73%;
+  display: flex;
 }
 
-#userRepo2 select{
+.footerDataClass{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: space-between;
+}
+.footerDataClass h6{
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.footerDataClass button{
+  width: 69%;
+  background-color: black;
+  height: 25%;
   color: white;
   border: none;
-  width: 100%;
-  font-size: 24px;
-  background-color: transparent;
-  outline: none;
-  font-weight: 700;
+  font-size: 17px;
+  border-radius: 4px;
 }
-table th{
-  color: #3a559f;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-table td{
-  font-size: 14px;
-}
-
-#compareExam{
-  font-size: 36px;
-  font-weight: 300;
-  letter-spacing: 4px;
-  color: #000;
-}
-#subHeading{
-  font-size: 16px;
-  opacity: .4;
-  color: #000;
-}
-
-#title img{
-  margin-left: 2.4%;
-  margin-top: 2.4%;
-}
-
-table thead{
-  background-color: #3a559f;
-}
-#check{
-  font-size: 11px;
+#line{
+  width: 90%;
+  height: .2%;
+  background-color: black;
+  border-radius: 100px;
+  opacity: .6;
 }
